@@ -21,6 +21,8 @@
 -(uint) createEntity;
 -(void) killEntity:(uint) e;
 
+-(NSArray*) getAllComponentsOfType:(ComponentType) componentType;
+
 -(Component*) getComponent:(ComponentType) componentType forEntity:(uint) eid;
 -(void) addComponent:(Component*) newComponent toEntity:(uint) eid;
 
