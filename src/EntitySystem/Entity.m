@@ -14,7 +14,7 @@
 
 -(Component*) v:(ComponentType) componentType
 {
-	return [em getComponentOfType:componentType forEntity:eid];
+	return [em getComponent:componentType forEntity:eid];
 }
 
 @end
