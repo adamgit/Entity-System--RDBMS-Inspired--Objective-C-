@@ -3,18 +3,18 @@
 
 @implementation Entity
 
-@synthesize es;
+@synthesize em;
 
 @synthesize eid;
 
 -(void) add:(Component*) newComponent
 {
-	[es addComponent:newComponent toEntity:eid];
+	[em addComponent:newComponent toEntity:eid];
 }
 
 -(Component*) v:(ComponentType) componentType
 {
-	return [es getComponentOfType:componentType forEntity:eid];
+	return [em getComponentOfType:componentType forEntity:eid];
 }
 
 @end
