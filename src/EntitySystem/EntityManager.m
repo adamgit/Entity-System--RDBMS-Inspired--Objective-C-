@@ -93,6 +93,13 @@
 	return result;
 }
 
+-(NSArray*) getAllComponentsOfType:(ComponentType) componentType
+{
+	NSDictionary *componentsByEntity = [componentsByType objectForKey:[NSNumber numberWithUnsignedInt:componentType]];
+	
+	return [componentsByEntity allValues];
+}
+
 -(void) addComponent:(Component*) newComponent toEntity:(uint) eid
 {
 	NSMutableDictionary *componentsByEntity = [componentsByType objectForKey:[NSNumber numberWithUnsignedInt:newComponent.type]];
