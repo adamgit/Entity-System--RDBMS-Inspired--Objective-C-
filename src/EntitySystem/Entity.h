@@ -10,7 +10,7 @@
 	
 }
 
-@property(nonatomic, retain) EntityManager *es;
+@property(nonatomic, retain) EntityManager *em;
 
 @property(nonatomic) int eid;
 
