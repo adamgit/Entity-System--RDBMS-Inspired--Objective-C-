@@ -8,6 +8,8 @@
 
 @synthesize allEntities;
 
+@synthesize em;
+
 - (id)init
 {
 	self = [super init];
