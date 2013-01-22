@@ -3,20 +3,26 @@
 
 @implementation Position
 
-@synthesize x, y;
+@synthesize x = _x, y = _y;
 
-- (id)init
-{
-	self = [super init];
-	if (self) {
-		[self initialize];
-	}
-	return self;
+- (id)initWithX:(float) x andY:(float) y {
+    self = [super init];
+    if (self) {
+        self.type = ComponentTypePosition;
+		self.x = x;
+		self.y = y;
+    }
+    return self;
 }
 
--(void) initialize
-{
-	self.type = ComponentTypePosition;
+- (id)init {
+	self = [super init];
+	if (self) {
+		self.type = ComponentTypePosition;
+		self.x = 0;
+		self.y = 0;
+	}
+	return self;
 }
 
 @end
