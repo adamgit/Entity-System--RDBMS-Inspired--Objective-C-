@@ -104,6 +104,12 @@
 {
 	NSMutableDictionary *componentsByEntity = [componentsByType objectForKey:[NSNumber numberWithUnsignedInt:newComponent.type]];
 	
+	if (componentsByEntity == nil) {
+		// adding first component of this type; initialize dictionary
+		componentsByEntity = [NSMutableDictionary dictionary];
+		[componentsByType setValue:componentsByEntity forKey:[NSNumber numberWithUnsignedInt:newComponent.type]];
+	}
+	
 	[componentsByEntity setObject:newComponent forKey:[NSNumber numberWithUnsignedInt:eid]];
 }
 
